@@ -2,9 +2,9 @@
 
 namespace ARP.MinimapSystems
 {
-    public class UnitOfMiniMap : IUnitOfMinimap
+    public class UnitOfMinimap : IUnitOfMinimap
     {
-        public UnitOfMiniMap()
+        public UnitOfMinimap()
         {
             gps = new GameObject(nameof(GPS)).AddComponent<GPS>();
         }
