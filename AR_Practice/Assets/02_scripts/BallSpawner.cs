@@ -24,8 +24,10 @@ public class BallSpawner : MonoBehaviour
 
     private void OnTapStartPositionInputStartted(InputAction.CallbackContext context)
     {
-        Vector2 tapposition = context.ReadValue<Vector2>();
+        Vector3 tapposition = context.ReadValue<Vector3>();
         Debug.Log($"Tapped {tapposition}");
+
+
 
         GameObject ball = Instantiate(_ballPrefeb, _xrCamera.position + _xrCamera.forward * 0.5f, _xrCamera.rotation);
         ball.GetComponent<Rigidbody>().AddForce(_xrCamera.forward * 500f, ForceMode.Force);
