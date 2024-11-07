@@ -17,7 +17,9 @@ public class AnchorMarker : MonoBehaviour
     }
     private void OnTouch(InputAction.CallbackContext context)
     {
-        if(_arRaycastManager.Raycast(_xrCamera.ViewportPointToRay(Vector2.one/2f),_hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes))
+        Vector2 tapposition = context.ReadValue<Vector2>();
+        if (_arRaycastManager.Raycast(_xrCamera.ScreenPointToRay(tapposition),_hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes))
+
             //Planes는 4개의 트랙커블타입을 포함하고있다.
         {
             if (_hits[0].trackable.TryGetComponent(out ARPlane plane))

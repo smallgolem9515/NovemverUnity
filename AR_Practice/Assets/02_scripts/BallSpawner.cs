@@ -24,7 +24,7 @@ public class BallSpawner : MonoBehaviour
 
     private void OnTapStartPositionInputStartted(InputAction.CallbackContext context)
     {
-        Vector3 tapposition = context.ReadValue<Vector3>();
+        Vector2 tapposition = context.ReadValue<Vector2>();
         Debug.Log($"Tapped {tapposition}");
 
 

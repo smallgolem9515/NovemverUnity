@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GuidLow: 4840439537610104373
   m_GuidHigh: 8072266385823737991
-  m_ReferenceObjects: []
+  m_ReferenceObjects:
+  - m_GuidLow: 5754892702985253511
+    m_GuidHigh: 16662832637340536217
+    m_Name: 
+    m_Entries: []
